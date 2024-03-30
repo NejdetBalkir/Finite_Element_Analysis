@@ -32,7 +32,6 @@ def PlotFieldonMesh(coordinates, nodes, vari, varimin, varimax):
             nd = nodes[iel, i]  # extract connected node for (iel)-th element
             X[i, iel] = coordinates[nd, 0]  # extract x value of the node
             Y[i, iel] = coordinates[nd, 1]  # extract y value of the node
-        print(nodes[iel, :])
         profile[:, iel] = vari[nodes[iel,:]]  # extract component value of the node
 
     # Plotting the FEM mesh and profile of the given component
